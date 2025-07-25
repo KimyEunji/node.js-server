@@ -3,6 +3,7 @@ import mongoose from "mongoose"; // Conectar una base de datos
 import cors from "cors"; // Dar seguridad a un server 
 import dotenv from "dotenv"; // Para llamar lo que hay en env
 import express from "express"; // Crear un server local 
+import { test } from "./backend/controllers/alumnos.controller.js";
 
 dotenv.config();
 mongoose.connect(process.env.urlBD)// Conectar con mongodb compass
@@ -22,3 +23,5 @@ app.use(cors());
 app.listen(4000, ()=>{
     console.log("Te escuho correctaemnte!!")
 }) // Verificar si funciona el server 
+
+test();
